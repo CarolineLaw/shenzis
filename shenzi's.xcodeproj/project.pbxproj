@@ -11,12 +11,12 @@
 		2218D640280FE09B00085482 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2218D63F280FE09B00085482 /* SceneDelegate.swift */; };
 		2218D642280FE09B00085482 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2218D641280FE09B00085482 /* ViewController.swift */; };
 		2218D645280FE09B00085482 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2218D643280FE09B00085482 /* Main.storyboard */; };
-		2218D648280FE09B00085482 /* shenzis.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2218D646280FE09B00085482 /* shenzis.xcdatamodeld */; };
 		2218D64A280FE09D00085482 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2218D649280FE09D00085482 /* Assets.xcassets */; };
 		2218D64D280FE09D00085482 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2218D64B280FE09D00085482 /* LaunchScreen.storyboard */; };
 		2218D658280FE09D00085482 /* shenzisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2218D657280FE09D00085482 /* shenzisTests.swift */; };
 		2218D662280FE09D00085482 /* shenzisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2218D661280FE09D00085482 /* shenzisUITests.swift */; };
 		2218D664280FE09D00085482 /* shenzisUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2218D663280FE09D00085482 /* shenzisUITestsLaunchTests.swift */; };
+		2291C91E282775FB00A4C7FD /* shenzisDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2291C91C282775FB00A4C7FD /* shenzisDataModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +42,6 @@
 		2218D63F280FE09B00085482 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2218D641280FE09B00085482 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2218D644280FE09B00085482 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2218D647280FE09B00085482 /* shenzi_s.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = shenzi_s.xcdatamodel; sourceTree = "<group>"; };
 		2218D649280FE09D00085482 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2218D64C280FE09D00085482 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2218D64E280FE09D00085482 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +50,7 @@
 		2218D65D280FE09D00085482 /* shenzi'sUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "shenzi'sUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2218D661280FE09D00085482 /* shenzisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shenzisUITests.swift; sourceTree = "<group>"; };
 		2218D663280FE09D00085482 /* shenzisUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shenzisUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2291C91D282775FB00A4C7FD /* shenzisDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = shenzisDataModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +108,7 @@
 				2218D649280FE09D00085482 /* Assets.xcassets */,
 				2218D64B280FE09D00085482 /* LaunchScreen.storyboard */,
 				2218D64E280FE09D00085482 /* Info.plist */,
-				2218D646280FE09B00085482 /* shenzis.xcdatamodeld */,
+				2291C91C282775FB00A4C7FD /* shenzisDataModel.xcdatamodeld */,
 			);
 			path = "shenzi's";
 			sourceTree = "<group>";
@@ -261,7 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2218D648280FE09B00085482 /* shenzis.xcdatamodeld in Sources */,
+				2291C91E282775FB00A4C7FD /* shenzisDataModel.xcdatamodeld in Sources */,
 				2218D642280FE09B00085482 /* ViewController.swift in Sources */,
 				2218D63E280FE09B00085482 /* AppDelegate.swift in Sources */,
 				2218D640280FE09B00085482 /* SceneDelegate.swift in Sources */,
@@ -604,13 +604,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		2218D646280FE09B00085482 /* shenzis.xcdatamodeld */ = {
+		2291C91C282775FB00A4C7FD /* shenzisDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				2218D647280FE09B00085482 /* shenzi_s.xcdatamodel */,
+				2291C91D282775FB00A4C7FD /* shenzisDataModel.xcdatamodel */,
 			);
-			currentVersion = 2218D647280FE09B00085482 /* shenzi_s.xcdatamodel */;
-			path = shenzis.xcdatamodeld;
+			currentVersion = 2291C91D282775FB00A4C7FD /* shenzisDataModel.xcdatamodel */;
+			path = shenzisDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
