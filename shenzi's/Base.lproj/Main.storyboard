@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gqh-dX-But">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Junior's-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="shenzi_s" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,23 +18,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wJ1-Bl-ezj">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                             </mapView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WIG-g5-ee0">
-                                <rect key="frame" x="0.0" y="44" width="414" height="71"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WIG-g5-ee0" userLabel="Open Door Container">
+                                <rect key="frame" x="0.0" y="88" width="414" height="70"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Open Door" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFn-zj-hwe">
-                                        <rect key="frame" x="165.5" y="18" width="83" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="30" id="SKd-HI-mJU"/>
-                                            <constraint firstAttribute="height" priority="250" constant="21" id="r2z-eS-Vii"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="76g-3S-gaD">
+                                        <rect key="frame" x="142.5" y="0.0" width="129" height="70"/>
+                                        <color key="tintColor" systemColor="systemGrayColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" buttonSize="large" titleAlignment="center">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Open Door">
+                                                    <attributes>
+                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" size="18" name="SFMono-Light"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didDragInsideOpenDoorButton:" destination="BYZ-38-t0r" eventType="touchDragInside" id="OYG-hp-3eV"/>
+                                            <action selector="didTapOpenDoorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JcP-VN-Sw4"/>
+                                        </connections>
+                                    </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Q7y-Xh-1L1">
-                                        <rect key="frame" x="189" y="47" width="36" height="19"/>
+                                        <rect key="frame" x="189" y="50" width="36" height="10.5"/>
                                         <color key="tintColor" systemColor="systemGrayColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="36" id="9bG-sv-eIB"/>
@@ -42,36 +53,112 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="xFn-zj-hwe" firstAttribute="centerX" secondItem="WIG-g5-ee0" secondAttribute="centerX" id="9ky-df-vq4"/>
-                                    <constraint firstItem="xFn-zj-hwe" firstAttribute="top" secondItem="WIG-g5-ee0" secondAttribute="top" constant="18" id="I1k-cq-06w"/>
-                                    <constraint firstAttribute="height" priority="250" constant="71" id="Ocw-U6-FrM"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="71" id="cbj-4F-brI"/>
-                                    <constraint firstItem="xFn-zj-hwe" firstAttribute="centerX" secondItem="Q7y-Xh-1L1" secondAttribute="centerX" id="dbN-ls-hdf"/>
-                                    <constraint firstAttribute="bottom" secondItem="Q7y-Xh-1L1" secondAttribute="bottom" constant="0.5" id="iZ0-FQ-Iq4"/>
-                                    <constraint firstItem="Q7y-Xh-1L1" firstAttribute="top" secondItem="xFn-zj-hwe" secondAttribute="bottom" constant="3" id="qjN-bp-bch"/>
+                                    <constraint firstItem="76g-3S-gaD" firstAttribute="centerX" secondItem="WIG-g5-ee0" secondAttribute="centerX" id="Ngg-zA-dxL"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="cbj-4F-brI"/>
+                                    <constraint firstAttribute="bottom" secondItem="Q7y-Xh-1L1" secondAttribute="bottom" constant="5" id="iZ0-FQ-Iq4"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="90" id="qTe-hT-OFK"/>
+                                    <constraint firstItem="76g-3S-gaD" firstAttribute="leading" relation="lessThanOrEqual" secondItem="WIG-g5-ee0" secondAttribute="leading" constant="159" id="qaV-TS-anl"/>
+                                    <constraint firstAttribute="bottom" secondItem="76g-3S-gaD" secondAttribute="bottom" id="xBx-fj-hTg"/>
+                                    <constraint firstItem="Q7y-Xh-1L1" firstAttribute="centerX" secondItem="76g-3S-gaD" secondAttribute="centerX" id="y7Z-7I-sZq"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OG2-ok-iyI" userLabel="Show Friends Container">
+                                <rect key="frame" x="0.0" y="806" width="414" height="90"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyg-p9-AM3">
+                                        <rect key="frame" x="132" y="0.0" width="150" height="90"/>
+                                        <color key="tintColor" systemColor="systemGrayColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" buttonSize="large" titleAlignment="center">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Show Friends">
+                                                    <attributes>
+                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" size="18" name="SFMono-Light"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didDragInsideOpenDoorButton:" destination="BYZ-38-t0r" eventType="touchDragInside" id="1Ha-qi-6qU"/>
+                                            <action selector="didTapOpenDoorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lVz-JR-nwN"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="n66-19-hdB">
+                                        <rect key="frame" x="189" y="9.5" width="36" height="10.5"/>
+                                        <color key="tintColor" systemColor="systemGrayColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="36" id="jXb-fu-ODH"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="115-3l-VqK"/>
+                                    <constraint firstItem="n66-19-hdB" firstAttribute="top" secondItem="OG2-ok-iyI" secondAttribute="top" constant="5" id="5Q6-BY-pMD"/>
+                                    <constraint firstItem="n66-19-hdB" firstAttribute="centerX" secondItem="dyg-p9-AM3" secondAttribute="centerX" id="H2g-eA-b2v"/>
+                                    <constraint firstAttribute="height" priority="250" constant="90" id="KU2-sq-d2L"/>
+                                    <constraint firstItem="dyg-p9-AM3" firstAttribute="top" secondItem="OG2-ok-iyI" secondAttribute="top" id="UWT-j5-1j7"/>
+                                    <constraint firstItem="dyg-p9-AM3" firstAttribute="leading" relation="lessThanOrEqual" secondItem="OG2-ok-iyI" secondAttribute="leading" constant="143" id="fNL-I8-R0a"/>
+                                    <constraint firstAttribute="bottom" secondItem="dyg-p9-AM3" secondAttribute="bottom" id="q4L-3r-FUZ"/>
+                                    <constraint firstItem="dyg-p9-AM3" firstAttribute="centerX" secondItem="OG2-ok-iyI" secondAttribute="centerX" id="uDT-fC-iHn"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="AccentColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottomMargin" secondItem="wJ1-Bl-ezj" secondAttribute="bottom" constant="-34" id="8e4-eb-AH0"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="wJ1-Bl-ezj" secondAttribute="bottom" id="8e4-eb-AH0"/>
                             <constraint firstItem="WIG-g5-ee0" firstAttribute="top" secondItem="wJ1-Bl-ezj" secondAttribute="top" id="Jp6-LY-Q4A"/>
                             <constraint firstItem="WIG-g5-ee0" firstAttribute="trailing" secondItem="wJ1-Bl-ezj" secondAttribute="trailing" id="Qjj-Nj-9VJ"/>
                             <constraint firstItem="WIG-g5-ee0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Rio-G8-LOO"/>
+                            <constraint firstItem="OG2-ok-iyI" firstAttribute="leading" secondItem="wJ1-Bl-ezj" secondAttribute="leading" id="Sm6-wk-OJg"/>
                             <constraint firstItem="WIG-g5-ee0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UgD-rN-SkV"/>
                             <constraint firstItem="WIG-g5-ee0" firstAttribute="leading" secondItem="wJ1-Bl-ezj" secondAttribute="leading" id="jEh-s5-STY"/>
+                            <constraint firstAttribute="bottom" secondItem="OG2-ok-iyI" secondAttribute="bottom" id="kRd-Fa-MkY"/>
                             <constraint firstItem="WIG-g5-ee0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sBF-Jk-ooM"/>
+                            <constraint firstItem="OG2-ok-iyI" firstAttribute="centerX" secondItem="wJ1-Bl-ezj" secondAttribute="centerX" id="sGg-Eg-ufR"/>
+                            <constraint firstItem="76g-3S-gaD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="xtS-9b-oca"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Junior's" id="Toc-4o-OU9"/>
+                    <connections>
+                        <outlet property="mapView" destination="wJ1-Bl-ezj" id="3eO-gc-glV"/>
+                        <outlet property="openDoorButton" destination="76g-3S-gaD" id="QGA-lk-QOW"/>
+                        <outlet property="showFriendsButton" destination="dyg-p9-AM3" id="EmJ-te-IIz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="747.82608695652175" y="93.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3X3-3z-EDr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gqh-dX-But" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4qm-Mw-Nfo">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="AccentColor"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="QJ5-S0-FLa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3sG-IE-2em" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5.7971014492753632" y="93.75"/>
         </scene>
     </scenes>
     <resources>
         <image name="chevron.down" catalog="system" width="128" height="72"/>
+        <image name="chevron.up" catalog="system" width="128" height="72"/>
+        <namedColor name="AccentColor">
+            <color red="0.65100002288818359" green="0.82400000095367432" blue="0.50999999046325684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
