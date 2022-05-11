@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
 
     @IBOutlet var openDoorButton: UIButton!
     @IBOutlet var mapView: MKMapView!
@@ -25,6 +25,10 @@ class ViewController: UIViewController {
     
     @IBAction func didTapOpenDoorButton(_ sender: Any) {
         // pull down open door screen
+        
+//        let vc = sender as? HomeViewController
+        
+//        vc?.performSegue(withIdentifier: <#T##String#>, sender: <#T##Any?#>)
         
     }
     
