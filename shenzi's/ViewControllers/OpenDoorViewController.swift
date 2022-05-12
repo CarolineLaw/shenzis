@@ -10,4 +10,7 @@ import UIKit
 
 class OpenDoorViewController: UIViewController {
     
+    @IBAction func didTapOpenDoorButton(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
 }

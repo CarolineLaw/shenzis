@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Junior's-->
+        <!--Shenzi's-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="shenzi_s" customModuleProvider="target" sceneMemberID="viewController">
@@ -25,7 +25,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="73"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="76g-3S-gaD">
-                                        <rect key="frame" x="143" y="0.0" width="128.5" height="73"/>
+                                        <rect key="frame" x="15" y="0.0" width="384" height="73"/>
                                         <color key="tintColor" systemColor="systemGrayColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" imagePlacement="bottom" imagePadding="5" buttonSize="large" titleAlignment="center">
@@ -50,8 +50,8 @@
                                 <constraints>
                                     <constraint firstItem="76g-3S-gaD" firstAttribute="centerX" secondItem="WIG-g5-ee0" secondAttribute="centerX" id="Ngg-zA-dxL"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="cbj-4F-brI"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="90" id="qTe-hT-OFK"/>
-                                    <constraint firstItem="76g-3S-gaD" firstAttribute="leading" relation="lessThanOrEqual" secondItem="WIG-g5-ee0" secondAttribute="leading" constant="159" id="qaV-TS-anl"/>
+                                    <constraint firstAttribute="height" priority="250" constant="73" id="lUx-RG-UNU"/>
+                                    <constraint firstItem="76g-3S-gaD" firstAttribute="leading" secondItem="WIG-g5-ee0" secondAttribute="leading" constant="15" id="qaV-TS-anl"/>
                                     <constraint firstAttribute="bottom" secondItem="76g-3S-gaD" secondAttribute="bottom" id="xBx-fj-hTg"/>
                                 </constraints>
                             </view>
@@ -75,10 +75,6 @@
                                                 </fragment>
                                             </attributedString>
                                         </buttonConfiguration>
-                                        <connections>
-                                            <action selector="didDragInsideOpenDoorButton:" destination="BYZ-38-t0r" eventType="touchDragInside" id="1Ha-qi-6qU"/>
-                                            <action selector="didTapOpenDoorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lVz-JR-nwN"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -94,6 +90,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="AccentColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WIG-g5-ee0" secondAttribute="bottom" priority="250" constant="200" id="4jS-aD-dPi"/>
                             <constraint firstAttribute="bottomMargin" secondItem="wJ1-Bl-ezj" secondAttribute="bottom" id="8e4-eb-AH0"/>
                             <constraint firstItem="dyg-p9-AM3" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Dk2-a2-Vu8"/>
                             <constraint firstItem="WIG-g5-ee0" firstAttribute="top" secondItem="wJ1-Bl-ezj" secondAttribute="top" id="Jp6-LY-Q4A"/>
@@ -108,10 +105,13 @@
                             <constraint firstItem="76g-3S-gaD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="xtS-9b-oca"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Junior's" id="Toc-4o-OU9"/>
+                    <navigationItem key="navigationItem" title="Shenzi's" id="Toc-4o-OU9"/>
                     <connections>
                         <outlet property="mapView" destination="wJ1-Bl-ezj" id="3eO-gc-glV"/>
                         <outlet property="openDoorButton" destination="76g-3S-gaD" id="QGA-lk-QOW"/>
+                        <outlet property="openDoorContainer" destination="WIG-g5-ee0" id="5c3-tu-vId"/>
+                        <outlet property="openDoorContainerBottomConstraintClosed" destination="xBx-fj-hTg" id="BSc-ks-hsS"/>
+                        <outlet property="openDoorContainerBottomConstraintOpen" destination="4jS-aD-dPi" id="dFk-Sl-Pke"/>
                         <outlet property="showFriendsButton" destination="dyg-p9-AM3" id="EmJ-te-IIz"/>
                     </connections>
                 </viewController>

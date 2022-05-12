@@ -13,6 +13,9 @@ class HomeViewController: UIViewController {
     @IBOutlet var openDoorButton: UIButton!
     @IBOutlet var mapView: MKMapView!
     @IBOutlet var showFriendsButton: UIButton!
+    @IBOutlet var openDoorContainer: UIView!
+    @IBOutlet var openDoorContainerBottomConstraintOpen: NSLayoutConstraint!
+    @IBOutlet var openDoorContainerBottomConstraintClosed: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,19 +23,17 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func didDragInsideOpenDoorButton(_ sender: Any) {
-        // pull down open door screen
+        presentOpenDoorVC()
     }
     
     @IBAction func didTapOpenDoorButton(_ sender: Any) {
-        // pull down open door screen
-        
-//        let vc = sender as? HomeViewController
-        
-//        vc?.performSegue(withIdentifier: <#T##String#>, sender: <#T##Any?#>)
-        
+        presentOpenDoorVC()
     }
     
-    
-    
+    func presentOpenDoorVC() {
+        let storyboard = UIStoryboard(name: "OpenDoorViewController", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "OpenDoorViewControllerID")
+        self.present(vc, animated: true)
+    }
 }
 
